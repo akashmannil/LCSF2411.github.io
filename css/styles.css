@@ -49,7 +49,7 @@
     --fs-lead:    clamp(1.15rem, 1.4vw, 1.4rem);
     --fs-h3:      clamp(1.15rem, 1.6vw, 1.5rem);
     --fs-h2:      clamp(1.9rem, 4.4vw, 3.25rem);
-    --fs-h1:      clamp(2.6rem, 7vw, 6rem);
+    --fs-h1:      clamp(2.15rem, 7vw, 6rem);
 
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -59,7 +59,7 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 
 html, body, header, nav, main, footer, section, article, aside,
 figure, img, h1, h2, h3, h4, p, ul, ol, blockquote, table {
@@ -163,14 +163,24 @@ article + section { border-top: 1px solid var(--line); }
     justify-content: space-between;
     gap: 1.5rem;
     padding: 0.85rem var(--gutter);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.4s var(--ease), padding 0.4s var(--ease);
+}
+/* Glass lives on a pseudo-element so the header itself never becomes a
+   containing block for the fixed mobile drawer (backdrop-filter would). */
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: rgba(14, 14, 16, 0.55);
     backdrop-filter: blur(14px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
-    border-bottom: 1px solid transparent;
-    transition: background 0.4s var(--ease), border-color 0.4s var(--ease), padding 0.4s var(--ease);
+    transition: background 0.4s var(--ease);
 }
+.site-header.scrolled::before { background: rgba(12, 12, 14, 0.86); }
 .site-header.scrolled {
-    background: rgba(12, 12, 14, 0.86);
     border-bottom-color: var(--line);
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
@@ -622,31 +632,33 @@ button[type="reset"] {
 /* ============================================================
    11. RESPONSIVE
    ============================================================ */
-@media (max-width: 920px) {
-    .menu-icon { display: flex; }
+@media (max-width: 1024px) {
+    .menu-icon { display: flex; position: relative; z-index: 210; }
     .site-nav { gap: 0; }
     .nav-list {
         position: fixed;
-        inset: 0 0 0 auto;
-        width: min(82vw, 360px);
+        top: 0; right: 0; bottom: 0; left: auto;
+        height: 100vh;
+        height: 100dvh;
+        width: min(84vw, 340px);
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
         gap: 0.2rem;
-        padding: 6rem 1.6rem 2rem;
-        background: rgba(12, 12, 14, 0.97);
+        padding: 5.5rem 1.5rem 2rem;
+        background: rgba(12, 12, 14, 0.98);
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
         border-left: 1px solid var(--line);
-        transform: translateX(105%);
-        transition: transform 0.5s var(--ease);
-        z-index: 140;
+        transform: translateX(100%);
+        transition: transform 0.45s var(--ease);
+        z-index: 190;
         overflow-y: auto;
     }
     .site-header.menu-open .nav-list { transform: translateX(0); }
-    .nav-list a { font-size: 1rem; padding: 0.9rem 0.6rem; border-bottom: 1px solid var(--line); border-radius: 0; }
+    .nav-list a { font-size: 1rem; padding: 0.9rem 0.5rem; border-bottom: 1px solid var(--line); border-radius: 0; }
     .nav-list a::after { display: none; }
-    .nav-list a.nav-cta { margin-top: 1rem; justify-content: center; border-radius: 999px; }
+    .nav-list a.nav-cta { margin-top: 1rem; justify-content: center; border-radius: 999px; border-bottom: 0; }
 }
 
 @media (min-width: 640px) {
