@@ -1,151 +1,76 @@
-/*
-Author: Akash Mannil
-Date: December 4, 2024
-File Name: training.css
-*/
+/* training.css — page-specific layout (dark theme). Global tokens in styles.css */
 
-/* Mobile First Styles */
+.training-schedule { overflow-x: auto; }
 
-/* General Layout */
-body {
-    overflow-x: visible;
-}
-
-main {
-    padding: 0 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-h1, h2, h3, caption {
-    color: #551A8B;
-}
-
-/* Training Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0px 0px 14px 0px black;
+    margin-top: 1.5rem;
+    min-width: 640px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
 }
-
-table caption {
-    font-size: 1.2em; /* Slightly smaller font for mobile */
-    margin-bottom: 20px;
-}
-
-th, td {
-    padding: 10px;
+caption {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
     text-align: left;
-    border: 1px solid #ddd;
+    margin-bottom: 1.2rem;
 }
-
-th {
-    background-color: #a89e45;
-    color: white;
+thead th {
+    background: var(--panel-3);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--line-2);
 }
-
+td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+tbody tr { background: var(--panel); transition: background 0.3s var(--ease); }
+tbody tr:nth-child(even) { background: var(--bg-2); }
+tbody tr:hover { background: rgba(200,137,61,0.10); }
+td:first-child { color: var(--ink); font-weight: 600; }
 td img.product-img {
-    width: 40px;
-    height: 40px;
+    width: 44px; height: 44px;
     object-fit: cover;
-    margin-right: 10px;
+    border-radius: 8px;
+    margin-right: 0.8rem;
+    vertical-align: middle;
+    border: 1px solid var(--line-2);
+    background: var(--panel-3);
 }
 
-/* Alternating row colors */
-tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+ul.training-details, .contact-info ul {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
 }
-
-tbody tr:hover {
-    background-color: #d1e7dd;
-}
-
-.table-caption-center {
-    text-align: unset;
-}
-
-ul.training-details {
-    font-weight: bold;
-}
-
-ul.training-details li:before {
-    font-family: Arial, sans-serif;
-    content: "\2713";
-    font-size: 24px;
-    color: #a89e45;
-    left: 0;
-    padding-right: 10px;
+ul.training-details li {
     position: relative;
-    top: 2px;
+    padding-left: 1.8rem;
+    color: var(--muted);
 }
-
-.contact-info {
-    text-align: center;
+ul.training-details li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.55em;
+    width: 8px; height: 8px;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg);
 }
-
-.contact-info a {
-    color: #551A8B;
-}
-/* Media Queries for Responsiveness */
-
-/* Tablet Styles */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    table caption {
-        font-size: 1.4em; /* Slightly larger caption on tablets */
-    }
-
-    th, td {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    td img.product-img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .table-caption-center {
-        text-align: center;
-    }    
-
-    section {
-        padding: 15px;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 1025px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    table caption {
-        font-size: 1.2em; /* Larger caption for desktops */
-    }
-
-    th, td {
-        font-size: 16px;
-        padding: 15px;
-    }
-
-    td img.product-img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .table-caption-center {
-        text-align: center;
-    }    
-
-
-    section {
-        padding: 20px;
-    }
-}
+.contact-info a { color: var(--accent-soft); }

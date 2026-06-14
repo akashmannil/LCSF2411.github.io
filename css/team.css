@@ -1,133 +1,88 @@
-/*
-Author: Akash Mannil
-Date: December 4, 2024
-File Name: team.css
-*/
+/* team.css — page-specific layout (dark theme). Global tokens in styles.css */
 
-/* Base Styles for Mobile First */
-
-/* General Layout */
-main {
-    padding: 0 20px;
-}
-
-h1, h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-h1 {
-    color: #551A8B;
-}
-
-section, article {
-    margin-bottom: 30px;
-}
-
-section p, article p {
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-/* Team Members Section */
 .team-members {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout for mobile */
-    gap: 20px;
-    box-shadow: 1px 2px 7px 0px black;
-    text-align: center;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: #a89e45d1;
-    color: #fff;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    margin-top: 2rem;
 }
-
-.team-members figcaption, .employee-spotlight figcaption, .employee-spotlight h2 {
-    color: #fff;
-}
-
 .team-member {
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.8rem;
     text-align: center;
+    transition: transform 0.45s var(--ease), border-color 0.45s var(--ease);
+}
+.team-member:hover { transform: translateY(-6px); border-color: var(--accent); }
+.team-member figure { margin: 0 0 1rem; }
+.team-member figure img {
+    width: 120px; height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 0.9rem;
+    border: 1px solid var(--line-2);
+    background: var(--panel-3);
+    box-shadow: 0 14px 30px -14px rgba(0,0,0,0.8);
+}
+.team-member figcaption {
+    font-family: var(--sans);
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    font-size: 0.95rem;
+}
+.team-member figcaption::after {
+    content: "";
+    display: block;
+    width: 28px; height: 2px;
+    background: var(--accent);
+    margin: 0.7rem auto 0;
+}
+.team-member p { font-size: 0.95rem; }
+
+.company-vision {
+    background: linear-gradient(135deg, rgba(200,137,61,0.12), transparent);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
 }
 
-figure {
-    margin-bottom: 15px;
+.why-join-us ul {
+    list-style: none;
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 1.5rem;
 }
-
-figure img {
-    height: 175px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px 0px black;
-}
-
-figcaption {
-    font-weight: bold;
-    color: #333;
-}
-
-figure.employee-spotlight-img {
-    text-align: center;
-}
-
-/* New Section Styling */
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.why-join-us ul li{
-    font-weight: bold;
-}
-
-.why-join-us ul li::before {
-    font-family: Arial, sans-serif;
-    content: "\2713";
-    font-size: 24px;
-    color: #a89e45;
-    left: 0;
-    padding-right: 10px;
+.why-join-us li {
     position: relative;
-    top: 2px;
+    padding-left: 1.8rem;
+    color: var(--muted);
+}
+.why-join-us li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.55em;
+    width: 8px; height: 8px;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg);
 }
 
 .employee-spotlight {
-    box-shadow: 1px 2px 7px 0px black;
+    background: linear-gradient(135deg, rgba(200,137,61,0.16), rgba(143,94,38,0.05));
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
     text-align: center;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: #a89e45d1;
-    color: #fff;
 }
-
-
-/* Media Queries for Responsiveness */
-
-/* Tablet Styles */
-@media (min-width: 768px) {
-    h1, h2 {
-        font-size: 28px;
-    }
-
-    section p, article p {
-        font-size: 15px;
-    }
-
-    .team-members {
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout for tablets */
-    }
+.employee-spotlight figure { margin: 1.5rem 0; }
+.employee-spotlight img {
+    width: 130px; height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 0.8rem;
+    border: 2px solid var(--accent);
 }
+.employee-spotlight figcaption { color: var(--accent-soft); font-weight: 700; }
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-    h1, h2 {
-        font-size: 32px;
-    }
-
-    section p, article p {
-        font-size: 16px;
-    }
-
-    .team-members {
-        grid-template-columns: repeat(3, 1fr); /* Three-column layout for desktops */
-    }
-}
+@media (min-width: 700px)  { .team-members { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .team-members { grid-template-columns: repeat(3, 1fr); } }

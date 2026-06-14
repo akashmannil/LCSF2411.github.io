@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- ArcBlade Works — Product Showcase. Original template: Akash Mannil (C0952939) -->
+<html lang="en">
+
+<head>
+    <title>ArcBlade Works — Product Showcase</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the ArcBlade Works range — a full-screen, scroll-driven showcase of our flagship circular saws, blades and safety gear with exclusive limited-time offers.">
+    <meta name="theme-color" content="#0E0E10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/showcase.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="site-header" id="siteHeader">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" class="brand-mark" width="42" height="42" alt="ArcBlade Works logo">
+            <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <ul id="menu-links" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showcase.html" class="is-active">Showcase</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="specials.html">Specials</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="menu-icon" id="menuToggle" onclick="hamburger()" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="showcase">
+
+        <!-- INTRO -->
+        <section class="sc-intro">
+            <div>
+                <span class="eyebrow">The Range · 2026</span>
+                <h1>Tools that <em>cut</em><br>like nothing else.</h1>
+                <p class="lead">Scroll to move through the lineup. Each tool takes the whole screen — backgrounds shift,
+                    the blade turns, and the offers reveal themselves as you go.</p>
+                <span class="sc-scrollcue">Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- 01 — FLAGSHIP -->
+        <section class="product-panel is-special is-flagship" data-name="Professional Circular Saw" data-bg="#3A2A14">
+            <div class="product-stage">
+                <div class="stage-grid">
+                    <div class="product-copy">
+                        <span class="offer-tag">Flagship · Limited offer</span>
+                        <div class="product-kicker"><span class="num">01</span> Professional Series</div>
+                        <h2 class="product-name">Professional<br>Circular Saw</h2>
+                        <p class="product-desc">Built for the job site. A high-torque brushless motor, laser-guided
+                            precision and an ergonomic grip that stays comfortable through the longest cut.</p>
+                        <ul class="product-specs">
+                            <li>1800 W</li><li>Brushless</li><li>7¼" Blade</li><li>Laser Guide</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="product-price">$254.99</span>
+                            <span class="product-was">$299.99</span>
+                        </div>
+                        <div class="product-cta">
+                            <a href="contact.html" class="btn">Shop now</a>
+                            <a href="specials.html" class="btn btn--ghost">See the deal</a>
+                        </div>
+                    </div>
+                    <div class="product-frame">
+                        <span class="flagship-flag">Flagship</span>
+                        <svg class="sc-blade" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke-linecap="round">
+                            <circle class="tooth-ring" cx="100" cy="100" r="93" stroke-width="6" stroke-dasharray="2 7.7"/>
+                            <circle cx="100" cy="100" r="84" stroke="currentColor" stroke-opacity=".5" stroke-width="1.2"/>
+                            <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-opacity=".4" stroke-width="6" stroke-dasharray="9 64"/>
+                            <circle cx="100" cy="100" r="22" stroke="currentColor" stroke-opacity=".6" stroke-width="1.5"/>
+                            <circle cx="100" cy="100" r="7" fill="currentColor"/>
+                        </svg>
+                        <div class="product-media">
+                            <img src="images/specials-professional-circular-saw.webp" alt="Professional Circular Saw" loading="eager" fetchpriority="high">
+                        </div>
+                        <div class="offer-badge"><span><span class="pct">15%</span><span class="lbl">Off</span></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 -->
+        <section class="product-panel is-special" data-name="Compact Circular Saw" data-bg="#15212F">
+            <div class="product-stage">
+                <div class="stage-grid">
+                    <div class="product-copy">
+                        <span class="offer-tag">Save 10% this week</span>
+                        <div class="product-kicker"><span class="num">02</span> Compact Series</div>
+                        <h2 class="product-name">Compact<br>Circular Saw</h2>
+                        <p class="product-desc">Lightweight, one-handed and made for tight spaces. The cordless compact
+                            delivers clean cuts for trim, plywood and home projects without the bulk.</p>
+                        <ul class="product-specs">
+                            <li>Cordless</li><li>1.4 kg</li><li>4½" Blade</li><li>One-Hand</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="product-price">$161.99</span>
+                            <span class="product-was">$179.99</span>
+                        </div>
+                        <div class="product-cta">
+                            <a href="contact.html" class="btn">Shop now</a>
+                        </div>
+                    </div>
+                    <div class="product-frame">
+                        <svg class="sc-blade" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke-linecap="round">
+                            <circle class="tooth-ring" cx="100" cy="100" r="93" stroke-width="6" stroke-dasharray="2 7.7"/>
+                            <circle cx="100" cy="100" r="84" stroke="currentColor" stroke-opacity=".5" stroke-width="1.2"/>
+                            <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-opacity=".4" stroke-width="6" stroke-dasharray="9 64"/>
+                            <circle cx="100" cy="100" r="22" stroke="currentColor" stroke-opacity=".6" stroke-width="1.5"/>
+                            <circle cx="100" cy="100" r="7" fill="currentColor"/>
+                        </svg>
+                        <div class="product-media">
+                            <img src="images/specials-compact-circular-saw.webp" alt="Compact Circular Saw" loading="lazy" decoding="async">
+                        </div>
+                        <div class="offer-badge"><span><span class="pct">10%</span><span class="lbl">Off</span></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 -->
+        <section class="product-panel is-special" data-name="Accessory Blades" data-bg="#301414">
+            <div class="product-stage">
+                <div class="stage-grid">
+                    <div class="product-copy">
+                        <span class="offer-tag">Buy one get one free</span>
+                        <div class="product-kicker"><span class="num">03</span> Accessories</div>
+                        <h2 class="product-name">Carbide<br>Accessory Blades</h2>
+                        <p class="product-desc">Precision carbide-tipped blades for wood, metal and plastic. Stock the
+                            workshop — every blade you buy comes with a second one free.</p>
+                        <ul class="product-specs">
+                            <li>Carbide-Tipped</li><li>Wood</li><li>Metal</li><li>Plastic</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="product-price">Buy 1 · Get 1</span>
+                        </div>
+                        <div class="product-cta">
+                            <a href="contact.html" class="btn">Claim offer</a>
+                        </div>
+                    </div>
+                    <div class="product-frame">
+                        <svg class="sc-blade" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke-linecap="round">
+                            <circle class="tooth-ring" cx="100" cy="100" r="93" stroke-width="6" stroke-dasharray="2 7.7"/>
+                            <circle cx="100" cy="100" r="84" stroke="currentColor" stroke-opacity=".5" stroke-width="1.2"/>
+                            <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-opacity=".4" stroke-width="6" stroke-dasharray="9 64"/>
+                            <circle cx="100" cy="100" r="22" stroke="currentColor" stroke-opacity=".6" stroke-width="1.5"/>
+                            <circle cx="100" cy="100" r="7" fill="currentColor"/>
+                        </svg>
+                        <div class="product-media">
+                            <img src="images/specials-accessory-blades.jpg" alt="Carbide accessory blades" loading="lazy" decoding="async">
+                        </div>
+                        <div class="offer-badge"><span><span class="pct">B1G1</span><span class="lbl">Free</span></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 -->
+        <section class="product-panel is-special" data-name="Safety Gear" data-bg="#13261A">
+            <div class="product-stage">
+                <div class="stage-grid">
+                    <div class="product-copy">
+                        <span class="offer-tag">Save 20% — kit deal</span>
+                        <div class="product-kicker"><span class="num">04</span> Protection</div>
+                        <h2 class="product-name">Pro<br>Safety Gear</h2>
+                        <p class="product-desc">ANSI-rated eye protection, cut-resistant gloves and anti-fog shields.
+                            Because the best cut is the one that keeps every finger intact.</p>
+                        <ul class="product-specs">
+                            <li>ANSI-Rated</li><li>Anti-Fog</li><li>Cut-Resistant</li><li>Full Kit</li>
+                        </ul>
+                        <div class="product-pricing">
+                            <span class="product-price">$79.99</span>
+                            <span class="product-was">$99.99</span>
+                        </div>
+                        <div class="product-cta">
+                            <a href="contact.html" class="btn">Shop now</a>
+                        </div>
+                    </div>
+                    <div class="product-frame">
+                        <svg class="sc-blade" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke-linecap="round">
+                            <circle class="tooth-ring" cx="100" cy="100" r="93" stroke-width="6" stroke-dasharray="2 7.7"/>
+                            <circle cx="100" cy="100" r="84" stroke="currentColor" stroke-opacity=".5" stroke-width="1.2"/>
+                            <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-opacity=".4" stroke-width="6" stroke-dasharray="9 64"/>
+                            <circle cx="100" cy="100" r="22" stroke="currentColor" stroke-opacity=".6" stroke-width="1.5"/>
+                            <circle cx="100" cy="100" r="7" fill="currentColor"/>
+                        </svg>
+                        <div class="product-media">
+                            <img src="images/specials-safety-gear.jpg" alt="Professional safety gear" loading="lazy" decoding="async">
+                        </div>
+                        <div class="offer-badge"><span><span class="pct">20%</span><span class="lbl">Off</span></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTRO -->
+        <section class="sc-outro">
+            <div>
+                <span class="eyebrow">Ready when you are</span>
+                <h2>Find the tool<br>for your next cut.</h2>
+                <p class="lead">Talk to our team about bundles, bulk orders and the right saw for your trade.</p>
+                <a href="contact.html" class="btn">Get in touch</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- fixed product counter -->
+    <div class="sc-hud" aria-hidden="true">
+        <span class="count" data-sc-index>01</span>
+        <span class="sep">/</span>
+        <span class="total" data-sc-total>04</span>
+        <span data-sc-name>Professional Circular Saw</span>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+                <p class="footer-tag">Precision tools for every cut. Engineered in Sarnia, Ontario since 1998.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="showcase.html">Showcase</a>
+                <a href="specials.html">Specials</a>
+                <a href="training.html">Training</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-contact">
+                <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a>
+                <a href="tel:+18001234567">1-800-123-4567</a>
+            </div>
+        </div>
+        <div class="footer-base">
+            <p>&copy; 2026 ArcBlade Works. All rights reserved.</p>
+            <p>Akash Mannil · C0952939</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
