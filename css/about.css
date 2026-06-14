@@ -1,103 +1,62 @@
-/*
-Author: Akash Mannil
-Date: December 4, 2024
-File Name: about.css
-*/
+/* about.css — page-specific layout (dark theme). Global tokens in styles.css */
 
-/* Base Styles for Mobile First */
+.about-intro h2, .our-story h2 { max-width: 18ch; }
+.about-intro .lead { max-width: 60ch; }
 
-/* General Layout */
-main {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 10px; /* Smaller padding for mobile */
+.why-shop-with-us ol {
+    counter-reset: reasons;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.why-shop-with-us li {
+    counter-increment: reasons;
+    position: relative;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.5rem 1.4rem 4.2rem;
+    color: var(--muted);
+}
+.why-shop-with-us li::before {
+    content: counter(reasons, decimal-leading-zero);
+    position: absolute;
+    left: 1.4rem; top: 1.2rem;
+    font-family: var(--display);
+    font-size: 1.4rem;
+    color: var(--accent);
 }
 
-/* Headings */
-h1, h2 {
-    font-size: 24px; /* Smaller font size for mobile */
-    margin-bottom: 20px;
-    color: #551A8B;
+.our-guarantee {
+    background: linear-gradient(135deg, rgba(200,137,61,0.14), rgba(143,94,38,0.05));
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
 }
+.our-guarantee strong { color: var(--accent-soft); }
 
-section {
-    margin-bottom: 40px;
-}
-
-section p {
-    font-size: 14px; /* Adjusted for smaller screens */
-    line-height: 1.8;
-}
-
-/* Ordered List Styling */
-ol {
-    padding-left: 15px; /* Smaller padding for mobile */
-    font-size: 14px;
-}
-
-ol li {
-    margin-bottom: 10px;
-}
-
-/* New Sections Styling */
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-/* Blockquote Styling */
-blockquote {
+.customer-testimonials blockquote {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1.5rem 1.8rem;
+    margin: 1rem 0;
     font-style: italic;
-    border-left: 4px solid #a89e45;
-    margin: 20px 0;
-    padding-left: 20px;
+    color: var(--ink);
 }
+.customer-testimonials blockquote strong { color: var(--accent-soft); font-style: normal; }
 
-/* Guarantee Section */
-strong {
-    font-weight: bold;
-    color: #a89e45;
-    transform: scale(1.1);
+.company-values ul, .future-vision ul {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
 }
+.company-values li { color: var(--muted); padding-left: 1.4rem; position: relative; }
+.company-values li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
-/* Media Queries for Tablet and Larger Devices */
-
-/* Tablet Styles (Min-width 768px) */
-@media (min-width: 768px) {
-    main {
-        padding: 0 30px; /* Increase padding for tablets */
-    }
-
-    h1, h2 {
-        font-size: 28px; /* Increase font size for tablets */
-    }
-
-    ol {
-        padding-left: 20px; /* More padding for tablets */
-    }
-
-    section p {
-        font-size: 16px; /* Increase paragraph font size for tablets */
-    }
-
-    nav ul {
-        grid-template-columns: repeat(3, 1fr); /* Adjust columns for tablet navigation */
-    }
-}
-
-/* Desktop Styles (Min-width 1025px) */
-@media (min-width: 1025px) {
-    main {
-        border-radius: 5px;
-        box-shadow: 1px 1px 6px 1px black;
-        padding: 13px;
-    }
-
-    h1, h2 {
-        font-size: 32px; /* Larger font size for desktop */
-    }
-
-    nav ul {
-        grid-template-columns: repeat(4, 1fr); /* Adjust columns for desktop navigation */
-    }
+@media (min-width: 720px) {
+    .why-shop-with-us ol { grid-template-columns: repeat(2, 1fr); }
 }

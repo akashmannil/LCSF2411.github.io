@@ -1,67 +1,77 @@
 <!DOCTYPE html>
-<!-- This website template was created by : Akash Mannil -->
-<!-- Student ID: C0952939 -->
+<!-- ArcBlade Works — About. Original template: Akash Mannil (C0952939) -->
 <html lang="en">
 
 <head>
-    <title>ArcBlade Works: About</title>
+    <title>ArcBlade Works — About</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0E0E10">
+    <meta name="description" content="ArcBlade Works has crafted precision circular saws and power tools in Sarnia, Ontario since 1998. Our story, guarantee and values.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- Use the header area for the website name or logo -->
-    <header>
-        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
-        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
+    <header class="site-header" id="siteHeader">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" class="brand-mark" width="42" height="42" alt="ArcBlade Works logo">
+            <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <ul id="menu-links" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="about.html" class="is-active">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="specials.html">Specials</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="menu-icon" id="menuToggle" onclick="hamburger()" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
-    <!-- Use the nav area to add hyperlinks to other pages within the website -->
-    <nav>
-        <ul id="menu-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html" class="activated-route">ABOUT</a></li>
-            <li><a href="team.html">OUR TEAM</a></li>
-            <li><a href="specials.html">SPECIALS</a></li>
-            <li><a href="training.html">TRAINING</a></li>
-            <li><a href="media.html">MEDIA</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-        </ul>
-        <div id="menu-links-mob">
-            <a class="menu-icon" onclick="hamburger()">
-                <div>&#9776;</div>
-            </a>
-        </div>
-    </nav>
-
     <div class="main-banner">
-        <img src="images/about-main-banner.webp"
-            alt="About image" class="img-banner">
+        <img src="images/about-main-banner.webp" alt="ArcBlade Works workshop" class="img-banner" loading="eager" fetchpriority="high" data-parallax="0.16">
+        <div class="banner-inner reveal">
+            <span class="eyebrow">Since 1998</span>
+            <h1>Built by people who care about the cut.</h1>
+            <p class="lead">From a family workshop in Sarnia to a trusted name in precision power tools.</p>
+        </div>
     </div>
-    
-    <!-- Use the main area to add the main content of the webpage -->
-    <main>
 
+    <main>
         <section class="about-intro">
-            <h2>About ArcBlade Works</h2>
-            <p>At ArcBlade Works, we are committed to providing the highest-quality circular saws and power tools. From woodworking to metalworking, we specialize in cutting-edge technology and precision engineering, ensuring that every tool we create is built to last and perform beyond expectations.</p>
+            <span class="eyebrow">About ArcBlade Works</span>
+            <h2>Cutting-edge by design.</h2>
+            <p class="lead">We are committed to providing the highest-quality circular saws and power tools. From
+                woodworking to metalworking, we specialise in precision engineering — ensuring every tool we create is
+                built to last and perform beyond expectations.</p>
         </section>
 
         <section class="our-story">
-            <h2>Our Story</h2>
-            <p>Founded in 1998, ArcBlade Works started as a small family-run workshop in Sarnia, Ontario. Our founders, passionate about craftsmanship and quality, set out to build power tools that were both reliable and affordable. Today, we have grown into a trusted name in the power tool industry, known for our innovation and dedication to customer satisfaction.</p>
+            <span class="eyebrow">Our Story</span>
+            <h2>From a small workshop to a trusted name.</h2>
+            <p>Founded in 1998, ArcBlade Works started as a small family-run workshop in Sarnia, Ontario. Our founders,
+                passionate about craftsmanship and quality, set out to build power tools that were both reliable and
+                affordable. Today, we have grown into a trusted name in the power tool industry, known for our innovation
+                and dedication to customer satisfaction.</p>
         </section>
 
         <section class="why-shop-with-us">
-            <h2>Six Reasons Why You Should Shop with Us</h2>
+            <span class="eyebrow">Why us</span>
+            <h2>Six reasons to shop with us.</h2>
             <ol>
                 <li>High-performance tools designed for precision and durability.</li>
                 <li>Wide range of products catering to professionals and DIY enthusiasts.</li>
@@ -73,53 +83,74 @@
         </section>
 
         <section class="our-guarantee">
-            <h2>Our Guarantee</h2>
-            <p>We stand behind every product we create. Our tools are rigorously tested to ensure they meet the highest standards of performance and durability. If for any reason you're not satisfied with your purchase, we offer a 30-day money-back guarantee. <strong>If you ever encounter any issues with your tool, we will replace or repair it at no extra cost.</strong></p>
+            <span class="eyebrow">Our Guarantee</span>
+            <h2>We stand behind every tool.</h2>
+            <p>Our tools are rigorously tested to ensure they meet the highest standards of performance and durability.
+                If for any reason you're not satisfied with your purchase, we offer a 30-day money-back guarantee.
+                <strong>If you ever encounter any issues with your tool, we will replace or repair it at no extra
+                cost.</strong></p>
         </section>
 
         <section class="customer-testimonials">
-            <h2>What Our Customers Say</h2>
-            <p>Don't just take our word for it. Here are a few testimonials from our satisfied customers:</p>
-            <blockquote>
-                "ArcBlade Works has changed the way I work. Their saws are incredibly durable, and the precision is unmatched!" - <strong>John D.</strong>
-            </blockquote>
-            <blockquote>
-                "I've been using ArcBlade tools for years, and they've never let me down. Great performance and excellent customer support." - <strong>Emma L.</strong>
-            </blockquote>
+            <span class="eyebrow">Word of mouth</span>
+            <h2>What our customers say.</h2>
+            <blockquote>"ArcBlade Works has changed the way I work. Their saws are incredibly durable, and the precision
+                is unmatched!" — <strong>John D.</strong></blockquote>
+            <blockquote>"I've been using ArcBlade tools for years, and they've never let me down. Great performance and
+                excellent customer support." — <strong>Emma L.</strong></blockquote>
         </section>
 
         <section class="company-values">
-            <h2>Our Core Values</h2>
-            <p>At ArcBlade Works, our values guide everything we do. We prioritize:</p>
+            <span class="eyebrow">Core Values</span>
+            <h2>What guides everything we do.</h2>
             <ul>
-                <li><strong>Innovation</strong> - Continuously improving our products and processes.</li>
-                <li><strong>Quality</strong> - Delivering top-tier tools that exceed customer expectations.</li>
-                <li><strong>Sustainability</strong> - Using environmentally responsible manufacturing practices.</li>
-                <li><strong>Customer Focus</strong> - Providing exceptional service and ensuring complete satisfaction.</li>
+                <li><strong>Innovation</strong> — Continuously improving our products and processes.</li>
+                <li><strong>Quality</strong> — Delivering top-tier tools that exceed customer expectations.</li>
+                <li><strong>Sustainability</strong> — Using environmentally responsible manufacturing practices.</li>
+                <li><strong>Customer Focus</strong> — Providing exceptional service and ensuring complete satisfaction.</li>
             </ul>
         </section>
 
         <section class="future-vision">
-            <h2>Our Vision for the Future</h2>
-            <p>As we move forward, we aim to expand our product line and reach new global markets. We're committed to redefining the power tool industry, setting new standards of quality and innovation. We see a future where ArcBlade Works continues to lead the way in tool technology and craftsmanship.</p>
+            <span class="eyebrow">Looking ahead</span>
+            <h2>Our vision for the future.</h2>
+            <p>As we move forward, we aim to expand our product line and reach new global markets. We're committed to
+                redefining the power tool industry, setting new standards of quality and innovation — a future where
+                ArcBlade Works continues to lead the way in tool technology and craftsmanship.</p>
         </section>
 
         <section class="community-involvement">
-            <h2>Our Community Involvement</h2>
-            <p>We are dedicated to giving back to the community through sponsorships, workshops, and partnerships with local organizations. ArcBlade Works believes in fostering a culture of learning and craftsmanship.</p>
+            <span class="eyebrow">Community</span>
+            <h2>Giving back.</h2>
+            <p>We are dedicated to giving back to the community through sponsorships, workshops, and partnerships with
+                local organisations. ArcBlade Works believes in fostering a culture of learning and craftsmanship.</p>
         </section>
-
     </main>
 
-    <!-- Use the footer area to add webpage footer content -->
-    <footer>
-        <p>&copy; Copyright 2024. All Rights Reserved.</p>
-        <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
-        <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+                <p class="footer-tag">Precision tools for every cut. Engineered in Sarnia, Ontario since 1998.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="showcase.html">Showcase</a>
+                <a href="specials.html">Specials</a>
+                <a href="training.html">Training</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-contact">
+                <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a>
+                <a href="tel:+18001234567">1-800-123-4567</a>
+            </div>
+        </div>
+        <div class="footer-base">
+            <p>&copy; 2026 ArcBlade Works. All rights reserved.</p>
+            <p>Akash Mannil · C0952939</p>
+        </div>
     </footer>
 
     <script src="scripts/script.js"></script>
-
 </body>
 
 </html>

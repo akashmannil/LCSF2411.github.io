@@ -1,60 +1,78 @@
 <!DOCTYPE html>
-<!-- This website template was created by : Akash Mannil -->
-<!-- Student ID: C0952939 -->
+<!-- ArcBlade Works — Page template. Original template: Akash Mannil (C0952939) -->
 <html lang="en">
 
 <head>
-    <title>ArcBlade Works: Template</title>
+    <title>ArcBlade Works — Template</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0E0E10">
+    <meta name="description" content="ArcBlade Works — precision power tools.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- Use the header area for the website name or logo -->
-    <header>
-        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
-        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
+    <header class="site-header" id="siteHeader">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" class="brand-mark" width="42" height="42" alt="ArcBlade Works logo">
+            <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <ul id="menu-links" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="specials.html">Specials</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="menu-icon" id="menuToggle" onclick="hamburger()" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
-    <!-- Use the nav area to add hyperlinks to other pages within the website -->
-    <nav>
-        <ul id="menu-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="team.html">OUR TEAM</a></li>
-            <li><a href="specials.html">SPECIALS</a></li>
-            <li><a href="training.html">TRAINING</a></li>
-            <li><a href="media.html">MEDIA</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-        </ul>
-        <div id="menu-links-mob">
-            <a class="menu-icon" onclick="hamburger()">
-                <div>&#9776;</div>
-            </a>
-        </div>
-    </nav>
-
-    <!-- Use the main area to add the main content of the webpage -->
     <main>
-
+        <section>
+            <span class="eyebrow">Section label</span>
+            <h2>Page heading.</h2>
+            <p class="lead">Intro paragraph goes here.</p>
+        </section>
     </main>
 
-    <!-- Use the footer area to add webpage footer content -->
-    <footer>
-        <p>&copy; Copyright 2024. All Rights Reserved.</p>
-        <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
-        <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+                <p class="footer-tag">Precision tools for every cut. Engineered in Sarnia, Ontario since 1998.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="showcase.html">Showcase</a>
+                <a href="specials.html">Specials</a>
+                <a href="training.html">Training</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-contact">
+                <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a>
+                <a href="tel:+18001234567">1-800-123-4567</a>
+            </div>
+        </div>
+        <div class="footer-base">
+            <p>&copy; 2026 ArcBlade Works. All rights reserved.</p>
+            <p>Akash Mannil · C0952939</p>
+        </div>
     </footer>
 
     <script src="scripts/script.js"></script>
-
 </body>
 
 </html>

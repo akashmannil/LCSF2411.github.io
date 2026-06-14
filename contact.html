@@ -1,77 +1,81 @@
 <!DOCTYPE html>
-<!-- This website template was created by : Akash Mannil -->
-<!-- Student ID: C0952939 -->
+<!-- ArcBlade Works — Contact. Original template: Akash Mannil (C0952939) -->
 <html lang="en">
 
 <head>
-    <title>ArcBlade Works: FAQs</title>
+    <title>ArcBlade Works — Contact</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0E0E10">
+    <meta name="description" content="Get in touch with ArcBlade Works for product enquiries, technical support and feedback. Based at 123 Industrial Drive, Sarnia, ON.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- Use the header area for the website name or logo -->
-    <header>
-        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
-        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
+    <header class="site-header" id="siteHeader">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" class="brand-mark" width="42" height="42" alt="ArcBlade Works logo">
+            <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <ul id="menu-links" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="specials.html">Specials</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html" class="nav-cta is-active">Contact</a></li>
+            </ul>
+            <button class="menu-icon" id="menuToggle" onclick="hamburger()" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
     </header>
 
-    <!-- Use the nav area to add hyperlinks to other pages within the website -->
-    <nav>
-        <ul id="menu-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="team.html">OUR TEAM</a></li>
-            <li><a href="specials.html">SPECIALS</a></li>
-            <li><a href="training.html">TRAINING</a></li>
-            <li><a href="media.html">MEDIA</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="contact.html" class="activated-route">CONTACT US</a></li>
-        </ul>
-        <div id="menu-links-mob">
-            <a class="menu-icon" onclick="hamburger()">
-                <div>&#9776;</div>
-            </a>
-        </div>
-    </nav>
-
     <div class="main-banner">
-        <img src="images/contact-main-banner.webp"
-            alt="Contact image" class="img-banner">
+        <img src="images/contact-main-banner.webp" alt="Contact ArcBlade Works" class="img-banner" loading="eager" fetchpriority="high" data-parallax="0.16">
+        <div class="banner-inner reveal">
+            <span class="eyebrow">Contact</span>
+            <h1>Let's talk tools.</h1>
+            <p class="lead">Questions, support or feedback — our team is here to help.</p>
+        </div>
     </div>
 
-    <!-- Use the main area to add the main content of the webpage -->
     <main>
-
         <section class="intro">
-            <h2>Contact ArcBlade Works</h2>
-            <p>We'd love to hear from you! Whether you have a question, need support, or would like to give us feedback, fill out the form below, and our team will get back to you as soon as possible.</p>
+            <span class="eyebrow">Reach out</span>
+            <h2>We'd love to hear from you.</h2>
+            <p class="lead">Whether you have a question, need support, or want to give feedback, fill out the form below
+                and our team will get back to you as soon as possible.</p>
         </section>
 
         <section class="contact-form">
-            <h2>Get in Touch</h2>
+            <h2>Get in touch</h2>
             <p>Please fill out the form below to reach out to us.</p>
             <form action="#" method="post">
                 <fieldset>
                     <legend>Contact Information</legend>
-                    
-                    <label for="full-name">Full Name:</label>
+
+                    <label for="full-name">Full Name</label>
                     <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required autofocus>
 
-                    <label for="email">Email:</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-                    <label for="phone">Phone:</label>
+                    <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
 
-                    <label for="contact-reason">Reason for Contact:</label>
+                    <label for="contact-reason">Reason for Contact</label>
                     <select id="contact-reason" name="contact-reason" required>
                         <option value="">--</option>
                         <option value="product-inquiry">Product Inquiry</option>
@@ -80,88 +84,85 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <label for="message">Your Message:</label>
+                    <label for="message">Your Message</label>
                     <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
 
                     <fieldset class="hear-about-us">
-                        <legend>How Did You Hear About Us?</legend>
-                        <label for="social-media">
-                            <input type="checkbox" id="social-media" name="how-heard" value="social-media">
-                            Social Media
-                        </label>
-                        <label for="referral">
-                            <input type="checkbox" id="referral" name="how-heard" value="referral">
-                            Referral
-                        </label>
-                        <label for="search-engine">
-                            <input type="checkbox" id="search-engine" name="how-heard" value="search-engine">
-                            Search Engine
-                        </label>
+                        <legend>How did you hear about us?</legend>
+                        <label for="social-media"><input type="checkbox" id="social-media" name="how-heard" value="social-media"> Social Media</label>
+                        <label for="referral"><input type="checkbox" id="referral" name="how-heard" value="referral"> Referral</label>
+                        <label for="search-engine"><input type="checkbox" id="search-engine" name="how-heard" value="search-engine"> Search Engine</label>
                     </fieldset>
 
                     <fieldset>
                         <legend>Preferred Contact Method</legend>
-                        <label for="email-contact">
-                            <input type="radio" id="email-contact" name="contact-method" value="email" required>
-                            Email
-                        </label>
-                        <label for="phone-contact">
-                            <input type="radio" id="phone-contact" name="contact-method" value="phone">
-                            Phone
-                        </label>
+                        <label for="email-contact"><input type="radio" id="email-contact" name="contact-method" value="email" required> Email</label>
+                        <label for="phone-contact"><input type="radio" id="phone-contact" name="contact-method" value="phone"> Phone</label>
                     </fieldset>
 
                     <button type="submit">Submit Request</button>
                     <button type="reset">Reset Form</button>
                 </fieldset>
                 <fieldset class="location">
+                    <legend>Our Location</legend>
                     <section>
-                        <h2>Our Location</h2>
-                        <p>Visit our office at:</p>
-                        <p>123 Industrial Drive, Sarnia, ON, Canada</p>
-                        <iframe src="https://maps.google.com/maps?q=123%20Industrial%20Drive%2C%20Sarnia%2C%20ON%2C%20Canada&output=embed" allowfullscreen="" class="map"></iframe>
+                        <p>Visit our office at 123 Industrial Drive, Sarnia, ON, Canada.</p>
+                        <iframe src="https://maps.google.com/maps?q=123%20Industrial%20Drive%2C%20Sarnia%2C%20ON%2C%20Canada&output=embed" loading="lazy" allowfullscreen="" class="map" title="Map to ArcBlade Works"></iframe>
                     </section>
                 </fieldset>
             </form>
         </section>
 
-        <!-- Additional sections -->
-
         <div class="support-social-media">
             <section class="support">
-                <h2>Customer Support</h2>
-                <p>If you need immediate assistance, please contact our customer support team:</p>
+                <span class="eyebrow">Support</span>
+                <h2>Customer support.</h2>
+                <p>For immediate assistance, contact our support team:</p>
                 <ul>
                     <li>Email: <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a></li>
                     <li>Phone: <a href="tel:+18001234567">1-800-123-4567</a></li>
-                    <li>Operating Hours: Monday to Friday, 9 AM to 5 PM EST</li>
+                    <li>Hours: Monday–Friday, 9 AM to 5 PM EST</li>
                 </ul>
             </section>
-    
+
             <section class="social-media">
-                <h2>Follow Us</h2>
-                <p>Stay connected with ArcBlade Works through our social media channels:</p>
+                <span class="eyebrow">Social</span>
+                <h2>Follow us.</h2>
+                <p>Stay connected with ArcBlade Works:</p>
                 <ul>
-                    <li><a href="https://facebook.com/arcbladeworks" target="_blank">Facebook</a></li>
-                    <li><a href="https://twitter.com/arcbladeworks" target="_blank">Twitter</a></li>
-                    <li><a href="https://instagram.com/arcbladeworks" target="_blank">Instagram</a></li>
-                    <li><a href="https://linkedin.com/company/arcbladeworks" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://facebook.com/arcbladeworks" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://twitter.com/arcbladeworks" target="_blank" rel="noopener">Twitter</a></li>
+                    <li><a href="https://instagram.com/arcbladeworks" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/arcbladeworks" target="_blank" rel="noopener">LinkedIn</a></li>
                 </ul>
             </section>
         </div>
-
-
     </main>
 
-    <!-- Use the footer area to add webpage footer content -->
-    <footer>
-        <p>&copy; Copyright 2024. All Rights Reserved.</p>
-        <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
-        <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-word">ARCBLADE<em>WORKS</em></span>
+                <p class="footer-tag">Precision tools for every cut. Engineered in Sarnia, Ontario since 1998.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="showcase.html">Showcase</a>
+                <a href="specials.html">Specials</a>
+                <a href="training.html">Training</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-contact">
+                <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a>
+                <a href="tel:+18001234567">1-800-123-4567</a>
+            </div>
+        </div>
+        <div class="footer-base">
+            <p>&copy; 2026 ArcBlade Works. All rights reserved.</p>
+            <p>Akash Mannil · C0952939</p>
+        </div>
     </footer>
 
     <script src="scripts/script.js"></script>
-
 </body>
 
 </html>
